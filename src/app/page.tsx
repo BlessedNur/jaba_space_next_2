@@ -1,103 +1,113 @@
-import Image from "next/image";
+"use client";
+import React from 'react';
+import { useTranslation } from '../context/TranslationContext';
+import Header from '../components/common/Header';
+import Footer from '../components/common/Footer';
+import HomeHeroSection from '../components/common/HomeHeroSection';
+import ExecutiveSummary from '../components/common/ExecutiveSection';
+import ObjectivesSection from '../components/common/ObjectiveSection';
+import InterventionSectorsSection from '../components/common/InterventionSection';
+import StatisticsSection from '../components/common/StatisticsSection';
+import JoinUsSection from '../components/common/JoinUsSection';
+import ExpertsSection from '../components/common/ExpertsSection';
+import PartnersSection from '../components/common/PartnersSection';
+import ServicesSection from '../components/common/ServicesSection';
+import RecentActivitiesSection from '../components/common/RecentActivitiesSection';
 
-export default function Home() {
+const HomePage: React.FC = () => {
+  const { t } = useTranslation();
+
+  const handleViewMore = () => {
+    alert('Voir Plus clicked');
+  };
+
+  const handleContactUs = () => {
+    alert('Contact Us clicked');
+  };
+
+  const activities = [
+    {
+      image: "/images/img_capture_1_455x388.png",
+      date: { day: "5", month: "Apr" },
+      title: "Placement de Talent",
+      description: "Aujourd'hui, le monde fait face à des défis extraordinaires. D'un côté, nous avons le développement exponentiel de l"
+    },
+    {
+      image: "/images/img_capture_1_455x389.png",
+      date: { day: "5", month: "Apr" },
+      title: "Placement de Talent",
+      description: "Aujourd'hui, le monde fait face à des défis extraordinaires. D'un côté, nous avons le développement exponentiel de l"
+    },
+    {
+      image: "/images/img_capture_1_455x388.png",
+      date: { day: "5", month: "Apr" },
+      title: "Placement de Talent",
+      description: "Aujourd'hui, le monde fait face à des défis extraordinaires. D'un côté, nous avons le développement exponentiel de l"
+    }
+  ];
+
+  const experts = [
+    {
+      image: "/images/img_mediumshotmaleflightattendantposing_2.png",
+      title: "Saved my Business",
+      description: "Aujourd'hui, le monde fait face à des défis extraordinaires. D'un côté, nous avons le développement exponentiel de la démographie",
+      name: "HOWARD MCMILLAN",
+      company: "HSBC Bank",
+      variant: "default" as const
+    },
+    {
+      image: "/images/img_mediumshotmaleflightattendantposing_2.png",
+      title: "Saved my Business",
+      description: "Aujourd'hui, le monde fait face à des défis extraordinaires. D'un côté, nous avons le développement exponentiel de la démographie",
+      name: "HOWARD MCMILLAN",
+      company: "HSBC Bank",
+      variant: "dark" as const
+    },
+    {
+      image: "/images/img_mediumshotmaleflightattendantposing_2.png",
+      title: "Saved my Business",
+      description: "Aujourd'hui, le monde fait face à des défis extraordinaires. D'un côté, nous avons le développement exponentiel de la démographie",
+      name: "HOWARD MCMILLAN",
+      company: "HSBC Bank",
+      variant: "default" as const
+    }
+  ];
+
+  const partners = [
+    "/images/img_logo.svg",
+    "/images/img_logo_white_a700.svg",
+    "/images/img_logo_white_a700_41x168.svg",
+    "/images/img_logo_white_a700_41x170.svg",
+    "/images/img_logo_41x170.svg"
+  ];
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen bg-white">
+      <Header />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      <HomeHeroSection />
+
+      <ExecutiveSummary />
+
+      <ObjectivesSection />
+
+      <ServicesSection onViewMore={handleViewMore} />
+
+      <InterventionSectorsSection />
+
+      <StatisticsSection />
+
+      <RecentActivitiesSection activities={activities} onViewMore={handleViewMore} />
+
+      <JoinUsSection onContactUs={handleContactUs} />
+
+      <ExpertsSection experts={experts} onContactUs={handleContactUs} />
+
+      <PartnersSection partners={partners} />
+
+      <Footer />
     </div>
   );
-}
+};
+
+export default HomePage;
