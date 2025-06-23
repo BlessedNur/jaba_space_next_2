@@ -50,7 +50,7 @@ const ContactFormSection: React.FC = () => {
                     value={formData.nom}
                     onChange={handleInputChange}
                     placeholder={t('contact.form.nom.placeholder') || 'Nom'}
-                    className="w-full px-4 py-4 bg-[rgba(42,42,41,0.4)] rounded-lg text-gray-800 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-400 transition-all border-0"
+                    className="w-full px-4 py-4 bg-gray-300 rounded-lg text-gray-800 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-400 transition-all border-0"
                     required
                   />
                 </div>
@@ -65,7 +65,7 @@ const ContactFormSection: React.FC = () => {
                     value={formData.prenom}
                     onChange={handleInputChange}
                     placeholder={t('contact.form.prenom.placeholder') || 'Prénom'}
-                    className="w-full px-4 py-4 bg-[rgba(42,42,41,0.4)] rounded-lg text-gray-800 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-400 transition-all border-0"
+                    className="w-full px-4 py-4 bg-gray-300 rounded-lg text-gray-800 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-400 transition-all border-0"
                     required
                   />
                 </div>
@@ -82,7 +82,7 @@ const ContactFormSection: React.FC = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   placeholder={t('contact.form.email.placeholder') || 'E-mail'}
-                  className="w-full px-4 py-4 bg-[rgba(42,42,41,0.4)] rounded-lg text-gray-800 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-400 transition-all border-0"
+                  className="w-full px-4 py-4 bg-gray-300 rounded-lg text-gray-800 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-400 transition-all border-0"
                   required
                 />
               </div>
@@ -98,7 +98,7 @@ const ContactFormSection: React.FC = () => {
                   onChange={handleInputChange}
                   placeholder={t('contact.form.message.placeholder') || 'Message'}
                   rows={6}
-                  className="w-full px-4 py-4 bg-[rgba(42,42,41,0.4)] rounded-lg text-gray-800 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-400 transition-all resize-none border-0"
+                  className="w-full px-4 py-4 bg-gray-300 rounded-lg text-gray-800 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-400 transition-all resize-none border-0"
                   required
                 />
               </div>

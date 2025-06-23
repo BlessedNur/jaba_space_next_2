@@ -21,21 +21,21 @@ const MapContactOverlay: React.FC = () => {
       </div>
       
       {/* Overlay card */}
-      <div className="absolute bottom-10 left-0 right-0 px-4">
+      {/* <div className="absolute bottom-10 left-0 right-0 px-4">
         <div className="bg-gray-900 text-white p-6 rounded-md shadow-lg max-w-4xl mx-auto">
           <h2 className="text-xl font-medium mb-6 pb-2 border-b border-orange-500">{t('map.offices.title')}</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6"> */}
             {/* Prenez contact */}
-            <div className="mb-4 md:mb-0">
+            {/* <div className="mb-4 md:mb-0">
               <h3 className="text-lg font-medium mb-2">{t('map.contact.title')}</h3>
               <p className="text-sm text-gray-300">
                 {t('map.contact.description')}
               </p>
-            </div>
+            </div> */}
             
             {/* Localisation */}
-            <div className="mb-4 md:mb-0">
+            {/* <div className="mb-4 md:mb-0">
               <h3 className="text-lg font-medium mb-2">{t('map.location.title')}</h3>
               <p className="text-sm text-gray-300">
                 {t('info.contact.location.address').split('\n').map((line, i) => (
@@ -45,27 +45,27 @@ const MapContactOverlay: React.FC = () => {
                   </React.Fragment>
                 ))}
               </p>
-            </div>
+            </div> */}
             
             {/* Contact */}
-            <div className="mb-4 md:mb-0">
+            {/* <div className="mb-4 md:mb-0">
               <h3 className="text-lg font-medium mb-2">{t('map.phone.title')}</h3>
               <p className="text-sm text-gray-300">
                 {t('info.contact.phone.number1')}<br />
                 {t('info.contact.phone.number2')}
               </p>
-            </div>
+            </div> */}
             
             {/* E-mail */}
-            <div>
+            {/* <div>
               <h3 className="text-lg font-medium mb-2">{t('map.email.title')}</h3>
               <p className="text-sm text-gray-300">
                 {t('info.contact.email.address')}
               </p>
-            </div>
-          </div>
+            </div> */}
+          {/* </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
